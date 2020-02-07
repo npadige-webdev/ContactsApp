@@ -1,0 +1,16 @@
+<div class="container">
+    <a class="btn btn-primary" routerLink = "/Contact-List">Back To Contact List</a>
+    <div class="card cardDisplay" style="width: 18rem;">
+        <div class="card-body" *ngIf = "selectContact">
+          <h5 class="card-title">{{selectContact[0].firstName}} {{selectContact[0].lastName}} </h5>
+          <p class="card-text">{{selectContact[0].company}}</p>
+        </div>
+        <div class="card-body">
+            <p>{{selectContact[0].address}}</p>
+
+            <h6 style="text-align: left;">Contact :</h6> 
+            <p>{{selectContact[0].email}}</p>
+            <p>{{selectContact[0].phone}}</p>
+        </div>
+      </div>
+</div>
