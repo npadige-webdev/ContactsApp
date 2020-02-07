@@ -7,3 +7,15 @@
 .example-full-width {
   width: 100%;
 }
+
+.custom-button{
+  background-color:  #00a1cf;
+  border-color:none;
+  outline: none !important;
+  border: none !important;
+}
+
+.custom-button:focus {
+  outline: none !important;
+  border: none !important;
+}

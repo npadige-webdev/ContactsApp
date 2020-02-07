@@ -1,5 +1,7 @@
 <div class="container">
-    <a class="btn btn-primary" routerLink = "/Contact-List">Back To Contact List</a>
+    <div class="row"  style="padding:0.5rem;">
+      <a class="btn btn-primary custom-button" routerLink = "/Contact-List">Back To Contact List</a>
+    </div>
     <div class="card cardDisplay" style="width: 18rem;">
         <div class="card-body" *ngIf = "selectContact">
           <h5 class="card-title">{{selectContact[0].firstName}} {{selectContact[0].lastName}} </h5>
