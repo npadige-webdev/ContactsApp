@@ -10,6 +10,7 @@ import { Material } from './material-module';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { CreateContactComponent } from './create-contact/create-contact.component';
+import { PhoneMaskDirective } from './phone-mask.directive';
 
 const myroutes: Routes = [
   { path: '', component: ContactListComponent },
@@ -23,11 +24,13 @@ const myroutes: Routes = [
     AppComponent,
     ContactListComponent,
     ContactDetailsComponent,
-    CreateContactComponent
+    CreateContactComponent,
+    PhoneMaskDirective
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(myroutes), HttpClientModule, FormsModule, ReactiveFormsModule, Material, BrowserAnimationsModule
   ],
+  exports:[PhoneMaskDirective],
   providers: [],
   bootstrap: [AppComponent]
 })

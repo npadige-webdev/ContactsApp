@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-contact-list',
@@ -17,16 +16,10 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.dataService.getContacts().subscribe((data: any[]) => {
       this.contacts = data;
-      this.dataService.apiContacts = data;
-
-      this.dataService.contacts.forEach(el => {
-        this.contacts.push(el)
-      })
-    })
+    });
   }
 
   selectContact(contact) {
-    this.router.navigate(['/Contact-Details/'+contact._id]);
-    // localStorage.setItem('selectedData', contact)
+    this.router.navigate(['/Contact-Details/' + contact._id]);
   }
 }
